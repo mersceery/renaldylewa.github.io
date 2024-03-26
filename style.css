@@ -6,12 +6,14 @@
   padding: 0;
   font-family: "Titillium Web", sans-serif;
 }
-
+body{
+  height: 100vh;
+}
 section {
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-snap-align: start;
-                
+  scroll-snap-align: start;  
+  height: 100vh;
 }
 
 
@@ -65,7 +67,7 @@ html{
   font-size: 1.5rem;
 }
 .text {
-  margin-left: -570px;
+  margin-left: -470px;
 }
 .text h2 {
   font-size: 36px;
@@ -97,7 +99,7 @@ html{
 
 .social {
   top: 170px;
-  right: 570px;
+  right: 620px;
   position: relative;
   z-index: 10;
   bottom: 20px;
@@ -246,7 +248,7 @@ html{
   border-radius: 21px;
   padding: 12px;
   width: 700px;
-  height: 278px;
+  height: 300px;
 }
 
 .details-text-header{
@@ -254,10 +256,7 @@ html{
   font-size: 35px;
 }
 
-.details-container{
-  margin-left: 10px;
-  margin-bottom: 5px;
-}
+
 .details-text-paragraph{
   color: white;
 }
@@ -331,7 +330,7 @@ html{
 .tools-header{
   position: absolute;
   color: white;
-  top: 22%;
+  top: 17%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
@@ -339,20 +338,31 @@ html{
 
 .tools-logo-container{
   position: absolute;
-  width: 700px;
-  height: 400px;
+  width: 1000px;
+  height: 550px;
   background:rgba(255, 255, 255, 0.5);
-  top: 55%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 20px;
 }
 
-.tools-logo-images img{
-  width: 100px;
-  height: 100px;
+.normalImg{
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   padding: 15px;
+}
+
+.biggerImg {
+  width: 200px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  object-fit: contain;
+  padding: 15px;
+}
+
+.tools-logo-images{
+  margin-left: 50px;
 }
 
 /*PROJECT*/
@@ -392,10 +402,13 @@ html{
   text-align: center;
 }
 
-.project-title{
+.project-title {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center; 
 }
+
 
 /*CONTACT*/
 
@@ -464,4 +477,252 @@ textarea:focus {
     outline: 1px solid #828282;
 }
 
-/*FOOTER*/
+.carousel-item .dg-carousel {
+  height: 600px; 
+  object-fit: cover; /* Ensures the image covers the entire carousel item */
+}
+
+.carousel-inner-dg {
+  width: 1000px; 
+  margin: 0 auto; /* Center the carousel */
+}
+
+
+
+.carousel-inner.carousel-inner-rmp {
+  height: 600px; 
+}
+
+.rmp-carousel {
+  height: 600px;
+  width: 285px;
+  object-fit: cover;
+}
+
+/* Change carousel control arrows to black */
+.carousel-control-prev, .carousel-control-next {
+  color: black;
+}
+
+/* Change carousel indicators to black */
+.carousel-indicators .active {
+  background-color: rgb(134, 134, 134);
+}
+
+.carousel-indicators li {
+  background-color: black;
+}
+
+/* Change the color of the indicator arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+}
+
+/* Change the color of the indicator arrows when hovered */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  color: black;
+}
+.carousel-item img {
+  object-fit: fill;
+  width: 1000px;
+  height: 600px;
+}
+
+.carousel-item.query-image img {
+  object-fit: fill;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 992px) {
+  iframe{
+    width: 600px;
+    height: 700px;
+  }
+
+  /* Adjustments for navbar */
+  .navbar {
+    text-align: center; /* Center the navigation items */
+    margin-top: 20px;
+}
+.menu {
+    display: block; 
+    margin-left: 100px; 
+}
+.menu ul {
+    padding: 0; 
+}
+.menu li {
+    display: inline-block; /* Display menu items horizontally */
+    margin: 0 50px; /* Add margin to the left and right of menu items */
+}
+ 
+  .social{
+    margin-left: 590px;
+  }
+  .text{
+    margin-left: 40px;
+  }
+
+.about-container{
+  margin-left: 90px;
+  height: 500px;
+  width: 500px;
+}
+
+.btn-container{
+  margin-left: 190px;
+}
+  /* Adjustments for Dungeon Crawler */
+  .project-big-container {
+      flex-direction: row;
+  }
+ 
+  .project-individual-container {
+      align-items: center;
+      text-align: center;
+  }
+
+  .project-img-container img, project-title, btn-container-project{
+    width: 200px;
+  }
+  .carousel-inner-dg{
+    width: 700px;
+    object-fit: fill;
+    
+  }
+  .carousel-inner.carousel-inner-dg .carousel-item img {
+    max-width: 100%; /* Ensure the image width doesn't exceed the container width */
+    height: auto; /* Maintain the aspect ratio of the image */
+  }
+  .carousel-indicators{
+    margin-bottom: 200px;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    margin-bottom: 200px;
+  }
+
+  /* Adjustments for Rate My Professor */
+  .carousel-inner-rmp{
+    width: 300px;
+  }
+  .carousel-inner.carousel-inner-rmp .carousel-item img {
+    height: 600px; /* Maintain the aspect ratio of the image */
+  }
+  .carousel-indicators-rmp{
+    margin-bottom: 10px;
+  }
+  .carousel-control-prev-rmp, .carousel-control-next-rmp {
+    margin-bottom: 100px;
+  }
+
+  /* Adjustments for Epic7 Web Scraper */
+  .carousel-inner-e7{
+    width: 700px;
+    object-fit: fill;
+    
+  }
+
+  .carousel-inner.carousel-inner-e7 .carousel-item img {
+    max-width: 100%; /* Ensure the image width doesn't exceed the container width */
+    height: auto; /* Maintain the aspect ratio of the image */
+  }
+  .carousel-indicators-e7{
+    margin-bottom: 200px;
+  }
+  .carousel-control-prev-e7, .carousel-control-next-e7 {
+    margin-bottom: 200px;
+  }
+
+  /* Adjustments for Pizza Service Platform container */
+  .carousel-inner-pizza{
+    width: 700px;
+  }
+  .carousel-inner.carousel-inner-pizza .carousel-item img {
+    max-width: 100%; /* Ensure the image width doesn't exceed the container width */
+  }
+  .carousel-indicators-pizza{
+    margin-bottom: 10px;
+  }
+  .carousel-control-prev-pizza, .carousel-control-next-pizza {
+    margin-bottom: 100px;
+  }
+
+
+  /* Adjustments for tools header */
+  .tools-header {
+      font-size: 24px;
+  }
+
+  /* Adjustments for tools logo container */
+  .tools-logo-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 700px;
+  }
+
+  .normalImg{
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    padding: 15px;
+  }
+  
+  .biggerImg {
+    width: 170px; 
+    height: 170px; 
+    object-fit: contain;
+    padding: 15px;
+  }
+  .video-container{
+    height: 100vh;
+  }
+
+  /* Adjustments for contact container */
+  .contact-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+}
+
+/* Media query for mobile phones */
+@media only screen and (max-width: 576px) {
+  /* Adjustments for headings */
+  h2 {
+      font-size: 24px;
+  }
+  h3 {
+      font-size: 18px;
+  }
+  p {
+      font-size: 14px;
+  }
+  /* Adjustments for social icons */
+  .social li {
+      margin-right: 10px;
+  }
+  /* Adjustments for buttons */
+  .btn {
+      font-size: 14px;
+      padding: 5px 10px;
+  }
+  /* Adjustments for carousel images */
+  .carousel-inner img {
+      width: 100%;
+      height: auto;
+  }
+  /* Adjustments for tools header */
+  .tools-header {
+      font-size: 20px;
+  }
+  /* Adjustments for project titles */
+  .project-title {
+      font-size: 20px;
+  }
+}
