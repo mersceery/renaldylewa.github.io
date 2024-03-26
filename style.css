@@ -338,7 +338,7 @@ html{
 
 .tools-logo-container{
   position: absolute;
-  width: 1150px;
+  width: 1200px;
   height: 550px;
   background:rgba(255, 255, 255, 0.5);
   top: 60%;
@@ -663,7 +663,7 @@ textarea:focus {
   .tools-logo-container {
       flex-wrap: wrap;
       justify-content: center;
-      width: 700px;
+      width: 800px;
   }
 
   .normalImg{
